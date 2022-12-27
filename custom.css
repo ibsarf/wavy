@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html,body{
+    width: 100vw;
+    height: 100vh;
+    display:grid;
+    place-items: center;
+    background-color:#eee;
+}
+.container{
+    background-color: #e0e0e0;
+    width: 400px;
+    height: 400px;
+    border-radius:5px;
+    box-shadow: 3px 3px 5px #aaa;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around; 
+    align-items: flex-start;
+    border-radius: 50px;
+    box-shadow:  31px 31px 62px #8f8f8f,
+                -31px -31px 62px #ffffff;
+}
+h1{
+    color: red;
+    margin: 0 auto;
+}
+.container .contain{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left:30px;
+    width:250px;
+    position: relative;
+}
+.contain input{
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    margin-bottom: 30px;
+    outline: none;
+    border-bottom: 2px solid #eee;
+    background-color: transparent;
+}
+
+input:valid, input:focus{
+    outline: none;
+    border-bottom:2px solid #bbb;
+    transition: .5s;
+}
+
+.container #btn{
+    margin: 30px 30px;
+    width: calc(400px - 60px);
+    height: 40px;
+    border-radius: 40px;
+    color: #fff;
+    background-color: red;
+    border: none;
+    font-size: 20px;
+    letter-spacing:5px ;
+    cursor: pointer;
+}
+#btn:active{
+    transform: scale(0.98);
+}
+.container p{
+    margin:0 30px;
+    font-size: 14px;
+}
+.container p a{
+    font-size: 14px;
+    color: #aaa;
+}
+.container p a:hover{
+    font-size: 14px;
+    color: #bbb;
+}
+.contain label{
+    position: absolute;
+    top:10px;
+    left: 0;
+}
+.contain label span{
+    display: inline-block;
+    min-width: 5px;
+    transition:  .5s cubic-bezier(.58,-0.71,.61,1.78);
+   
+}
+
+.contain input:active + label span,
+.contain input:focus + label span{
+    transform: translateY(-30px);
+}
